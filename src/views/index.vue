@@ -2,6 +2,7 @@
     <div class="index">
         <component_head/>
         <component_body/>
+        <component_footer/>
     </div>
 </template>
 
@@ -10,10 +11,13 @@
 import component_head from '@/components/component-head'
 // 引入内容组件
 import component_body from '@/components/component-body'
+// 引入播放控件组件
+import component_footer from '@/components/component-footer'
 export default {
     components:{
         component_head,
-        component_body
+        component_body,
+        component_footer
     },
     methods:{
     }
