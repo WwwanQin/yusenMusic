@@ -8,8 +8,14 @@ Vue.use(Vant);
 import axios from 'axios'
 Vue.prototype.$axios = axios;
 import router from './router'
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
+// 引入音频文件
+import audioSrc from './static/audio/周杰伦 - 不能说的秘密.flac';
+Vue.prototype.initAudio = function(){
+  let audio = document.querySelector('#audio');
+  audio.setAttribute('src',audioSrc);
+  Vue.prototype.audio = audio;
+}
 new Vue({
   router,
   render: h => h(App)

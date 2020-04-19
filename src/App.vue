@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    <audio id="audio"></audio>
   </div>
 </template>
 

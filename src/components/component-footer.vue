@@ -8,8 +8,8 @@
             <div class="playControl">
                 <ul class="controller-list">
                     <li v-for="(item,index) in controlList" :key="index">
-                        <van-button>
-                             <span :class="item.icon" @click="item.fn"></span>
+                        <van-button @click="item.fn(index)">
+                             <span :class="item.icon"></span>
                         </van-button>
                        
                     </li>
@@ -29,30 +29,41 @@ export default {
             controlList:[
                 {
                     icon: 'iconfont iconshangyishou_huaban',
-                    fn(){
-                        console.log(1);
+                    fn:(index) => {
+                        console.log(this.controlList[index]);
                     }
                 },
                 {
                     icon: 'iconfont iconbofang',
-                    fn(){
-                        
+                    fn:(index) => {
+                        this.controlList[index].icon == 
+                        'iconfont iconbofang' ? 
+                        this.controlList[index].icon = 'iconfont iconbofang1' : 
+                        this.controlList[index].icon = 'iconfont iconbofang'
+                        if(this.audio.paused){
+                            this.audio.play();
+                        }else{
+                            this.audio.pause();
+                        }
                     }
                 },
                 {
                     icon: 'iconfont iconxiayishou_huaban',
-                    fn(){
-                        
+                    fn:(index) => {
+                        console.log(this.controlList[index]);
                     }
                 },
                 {
                     icon: 'iconfont icongengduo',
-                    fn(){
-                        
+                    fn:(index) => {
+                        console.log(this.controlList[index]);
                     }
                 }
             ]
         }
+    },
+    mounted(){
+        this.initAudio();
     }
 }
 </script>

@@ -199,13 +199,14 @@ export default {
           height: 100%;
           .user_info{
             display: flex;
-            width: 90%;
+            width: 100%;
             height: 60 / 360 * 100vw;
-            padding: 10 / 360 * 100vw;
+            margin-top: 25 / 360 *100vw;
             .head_img{
               height: 100%;
-              flex: 0 0 30%;
+              flex: 0 0 25%;
               img{
+                margin-left: 5 / 360 * 100vw;
                 max-width: 60 / 360 * 100vw;
                 height: 100%;
                 border: 2px dotted #e9d8d8;
@@ -215,7 +216,7 @@ export default {
               }
             }
             .user_message{
-              flex: 0 0 70%;
+              flex: 0 0 75%;
               display: flex;
               flex-direction: column;
               align-items: flex-start;
@@ -230,6 +231,7 @@ export default {
                 text-overflow: ellipsis;
                 display: flex;
                 align-items: center;
+                padding-left: 7 / 360 * 100vw;
                 a{
                   color: red;
                 }
